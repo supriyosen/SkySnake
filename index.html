@@ -275,7 +275,7 @@
                 }
                 
                 // If all else fails, create a new audio element
-                const testAudio = new Audio('https://raw.githubusercontent.com/supriyosen/SkySnakeGame/main/eating-sound.wav');
+                const testAudio = new Audio('eating-sound.wav');
                 testAudio.play()
                     .then(() => {
                         console.log("Test sound played using new Audio element");
@@ -341,7 +341,7 @@
                 console.log("Attempting to load eating sound...");
                 
                 // Also preload an HTML5 Audio element as fallback for eating sound
-                eatingAudioElement = new Audio('https://raw.githubusercontent.com/supriyosen/SkySnakeGame/main/eating-sound.wav');
+                eatingAudioElement = new Audio('eating-sound.wav');
                 eatingAudioElement.volume = 1.0;
                 eatingAudioElement.preload = 'auto';
                 
@@ -356,7 +356,7 @@
                 
                 // Create ambient music using HTML5 Audio
                 // This is simpler and more reliable than Three.js audio for background music
-                ambientMusic = new Audio('https://raw.githubusercontent.com/supriyosen/SkySnakeGame/main/Elysium.mp3');
+                ambientMusic = new Audio('Elysium.mp3');
                 ambientMusic.loop = true;
                 ambientMusic.volume = 0.25; // Reduced from 0.5 to 0.25 (50% reduction)
                 console.log("Ambient music element created");
@@ -365,7 +365,7 @@
                 
                 // Load eating sound with Three.js
                 audioLoader.load(
-                    'https://raw.githubusercontent.com/supriyosen/SkySnakeGame/main/eating-sound.wav', 
+                    'eating-sound.wav', 
                     function(buffer) {
                         // Success callback
                         eatingSound.setBuffer(buffer);
@@ -2267,7 +2267,7 @@
                 
                 // If all else fails, create a new audio element
                 console.log("Creating new Audio element for eating sound");
-                const audio = new Audio('https://raw.githubusercontent.com/supriyosen/SkySnakeGame/main/eating-sound.wav');
+                const audio = new Audio('eating-sound.wav');
                 audio.play()
                     .then(() => {
                         console.log("Eating sound played using new Audio element");
